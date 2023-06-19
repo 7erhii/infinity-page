@@ -1,25 +1,13 @@
-// console.log(1);
+document.addEventListener("DOMContentLoaded", () => {
+  const linkElement = document.querySelectorAll(".main__link");
 
-// document.querySelector('.themetoggle').addEventListener('click', (event) => {
-//    event.preventDefault();
-//    if (localStorage.getItem('theme') === 'dark') {
-//       localStorage.removeItem('theme');
-//    }
-//    else {
-//       localStorage.setItem('theme', 'dark')
-//    }
-//    addDarkClassToHTML()
-// });
+  linkElement.forEach((link, index) => {
+    const loadDelay = index * 240;
 
-// function addDarkClassToHTML() {
-//    try {
-//       if (localStorage.getItem('theme') === 'dark') {
-//          document.querySelector('.page').classList.add('dark');
-//       }
-//       else {
-//          document.querySelector('.page').classList.remove('dark');
-//       }
-//    } catch (err) { }
-// }
+    setTimeout(() => {
+      link.classList.add("show");
+    }, loadDelay);
+  });
+});
 
-// addDarkClassToHTML();
+

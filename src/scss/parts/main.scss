@@ -1,17 +1,32 @@
 .main {
-  position: relative;
+  &__wrapper {
+    position: relative;
+    animation: wrapper 3s forwards;
+  }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-image: url(http://www.ehsanrahman.com/assets/css/images/bg.jpg);
+    background-image: url(https://raw.githubusercontent.com/s1mpson/-/master/codepen/infinite-photo-grid/photo-grid.jpg);
+    background-repeat: repeat-x;
+    animation: scroll 50s linear infinite;
+    will-change: background-position;
 
-  background-size: cover;
-  background-repeat: repeat-x;
-  animation: scroll 50s linear infinite;
-  will-change: background-position;
-  height: 100vh;
-
+    background-size: auto 100%;
+  }
+  &__bg img {
+  }
+  &__wrapper {
+    height: 100%;
+  }
+  height: 100%;
   &__descr {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 30;
   }
   &__title {
     text-align: center;
@@ -35,8 +50,11 @@
     margin-top: em(50);
     gap: em(30);
     align-items: center;
+    justify-content: center;
   }
   &__link {
+    opacity: 0;
+
     border: 1px solid #000;
     border-radius: 50%;
     padding: em(30);
@@ -50,6 +68,10 @@
     width: em(40);
     height: em(40);
   }
+  .show {
+    opacity: 1;
+    transition: all 0.24s ease-in-out;
+  }
 }
 
 @keyframes scroll {
@@ -58,5 +80,14 @@
   }
   to {
     background-position: left 0px top 0px;
+  }
+}
+
+@keyframes wrapper {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
   }
 }
