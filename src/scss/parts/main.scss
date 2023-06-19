@@ -1,0 +1,62 @@
+.main {
+  position: relative;
+
+  background-size: cover;
+  background-repeat: repeat-x;
+  animation: scroll 50s linear infinite;
+  will-change: background-position;
+  height: 100vh;
+
+  &__descr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__title {
+    text-align: center;
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      font-size: em(80);
+      font-weight: 800;
+    }
+  }
+  &__subtitle {
+    text-align: center;
+    margin-top: em(50);
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-size: em(40);
+      font-weight: 300;
+    }
+  }
+  &__links {
+    display: flex;
+    margin-top: em(50);
+    gap: em(30);
+    align-items: center;
+  }
+  &__link {
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: em(30);
+    transition: 0.24s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.204);
+    }
+  }
+  &__link-logo svg {
+    width: em(40);
+    height: em(40);
+  }
+}
+
+@keyframes scroll {
+  from {
+    background-position: left calc(4.84 * min(100vh, 750px)) top 0px;
+  }
+  to {
+    background-position: left 0px top 0px;
+  }
+}
