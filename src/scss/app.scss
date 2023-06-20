@@ -1,13 +1,8 @@
 $selectionColor: #23a6d5;
-$darkThemeLogo: rgb(245, 224, 103);
-$whiteNemeTextColor: rgb(34, 36, 169);
+$textColor: #ffffff;
+$overlayColor: rgba(0, 0, 0, 0.3);
+$svgLinksColor: #e2e2e2;
 
-$cardTitleColor:  rgb(26 28 92 / 84%);;
-$cardSubTitleColor: rgb(93, 93, 132);
-
-$darkThemeNameColor: rgb(245, 224, 103);
-$darkThemeCardTitleText: rgb(255, 255, 255);
-$darkThemeCardSubtitleText: rgb(161, 161, 161);
 
 // Core
 @import 'core/mixins';
@@ -17,6 +12,10 @@ $darkThemeCardSubtitleText: rgb(161, 161, 161);
 
 // Parts
 @import 'parts/main';
+@import 'parts/bg';
+@import 'parts/overlay';
+@import 'parts/descr';
+@import 'parts/social';
 
 
 

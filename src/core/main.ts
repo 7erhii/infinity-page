@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const linkElement = document.querySelectorAll(".main__link");
+  const linkElement = document.querySelectorAll(".social__link");
 
   linkElement.forEach((link, index) => {
     const loadDelay = index * 240;
